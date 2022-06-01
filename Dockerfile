@@ -5,6 +5,7 @@ COPY mvnw .
 COPY pom.xml .
 COPY src src
 
+RUN chmod +x mvnw
 RUN ./mvnw
 
 FROM adoptopenjdk/openjdk11:alpine-jre
