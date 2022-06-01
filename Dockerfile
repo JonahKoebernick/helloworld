@@ -5,7 +5,7 @@ COPY mvnw .
 COPY pom.xml .
 COPY src src
 
-RUN ./mvnw package -DskipTests
+RUN ./mvnw
 
 FROM adoptopenjdk/openjdk11:alpine-jre
 COPY --from=build target/helloworld-0.0.1-SNAPSHOT.jar app.jar
